@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Parking Lot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<button class="back-button" onclick="window.location.href='index.html'">Back</button> 
+
+<body>
+    <center>
+    <header>
+        <h1>WELCOME TO CAR PARKING RESERVATION SYSTEM</h1>
+    </header>
+</center>
+<style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: violet;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: blue;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: skyblue;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: violet;
+    color: indigo;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
+}
+
+    </style>
+    <div class="container">
+        <h2>Add a Parking Lot</h2>
+        <form action="parkinglot.php" method="post">
+            <div class="form-group">
+                <label for="parkinglot_id">parkinglot_id:</label>
+                <input type="text" id="parkinglot_id" name="parkinglot_id" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="capacity">Capacity:</label>
+                <input type="number" id="capacity" name="capacity" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+                <button type="button" onclick="location.href='parkinglot.php';">View</button>
+                <!-- Update button -->
+                <button type="button" onclick="location.href='update_parkinglot.php';">Update</button>
+            </div>
+            <footer>
+        <p>&copy; 2024 Car Parking Reservation System</p>
+    </footer></center>
+    <marquee> created and designed by ishimwe emmanuel@222004496</marquee>
+        </form>
+    </div>
+</body>
+</html>

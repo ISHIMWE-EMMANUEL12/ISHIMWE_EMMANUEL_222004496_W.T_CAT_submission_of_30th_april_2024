@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signout</title>
+    <button class="back-button" onclick="window.location.href='index.html'">Back</button>
+    </center>
+    <style>
+        /* Add your CSS styles here */
+      body {
+    font-family: Arial, sans-serif;
+    background-color: blue;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: blue;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: skyblue;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: violet;
+    color: indigo;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
+}
+
+    </style>
+</head>
+<body>
+    <center>
+    <h1>welcome to car parking reservation system</h1>
+    <form action="signout.php" method="post">
+            <label for="username">username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">password:</label>
+            <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="signout">
+        <p>Already have an account? <a href="login.html">login</a></p>
+        </center>
+    </form>
+
+    <script>
+        // Check if the URL contains a success parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const success = urlParams.get('success');
+        
+        // If success parameter exists and is true, display success message
+        if (success === 'true') {
+            alert('signout successful!'); // Display pop-up message
+            header("refresh:2; url=index.html"); // Redirect after 2 seconds
+        }
+    </script>
+</center>
+</body>
+</html>

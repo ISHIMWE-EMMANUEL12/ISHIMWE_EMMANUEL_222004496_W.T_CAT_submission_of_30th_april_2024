@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        /* Add your CSS styles here */
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('./ishemmy.png'); /* Adjust path to the image */
+    background-size: cover;
+    background-position: center;
+         }
+
+        form {
+            background-color: skyblue;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="username"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: blue;
+            color: indigo;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+   <button class="back-button" onclick="window.location.href='index.html'">Back</button>
+    <center>
+    <header>
+        <h1>WELCOME TO CAR PARKING RESERVATION SYSTEM</h1>
+    </header>
+</center>
+      <form action="login.php" method="post">
+        <label for="username">username :</label>
+        <input type="username" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="login">
+    </form> 
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: violet;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: blue;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: blue;
+    color: indigo;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: violet;
+}
+</style>
+</head>
+<body>
+    <center>
+        <header>
+            <h1>WELCOME TO CAR PARKING RESERVATION SYSTEM</h1>
+        </header>
+        <marquee>Reserve with the experts</marquee>
+    </center>
+
+    <button class="back-button" onclick="window.location.href='index.html'">Back</button>
+
+    <div class="container">
+        <h2>Reservation Form</h2>
+        <form action="reservation.php" method="POST">
+            <div class="form-group">
+                <label for="start_time">Start Time:</label>
+                <input type="datetime-local" id="start_time" name="start_time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="end_time">End Time:</label>
+                <input type="datetime-local" id="end_time" name="end_time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cost">Cost:</label>
+                <input type="text" id="cost" name="cost" required>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <!-- Update form -->
+    <div class="container">
+        <h2>Update Reservation</h2>
+        <form action="update_reservation.php" method="POST">
+            <div class="form-group">
+                <label for="reservation_id">Reservation ID:</label>
+                <input type="text" id="reservation_id" name="reservation_id" required>
+            </div>
+
+            <div class="form-group">
+                <label for="new_cost">New Cost:</label>
+                <input type="text" id="new_cost" name="new_cost" required>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Update">
+            </div>
+        </form>
+    </div>
+
+    <center>
+        <footer>
+            <p>&copy; 2024 Car Parking Reservation System</p>
+        </footer>
+        <marquee>Created and designed by Ishimwe Emmanuel @222004496</marquee>
+    </center>
+</body>
+</html>
